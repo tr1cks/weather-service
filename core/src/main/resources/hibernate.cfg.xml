@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+        <property name="javax.persistence.validation.mode">ddl</property>
+
+        <property name="cache.use_second_level_cache">false</property>
+        <property name="cache.use_query_cache">false</property>
+
+        <mapping resource="hbm/City.hbm.xml"/>
+        <mapping resource="hbm/Country.hbm.xml"/>
+        <mapping resource="hbm/WeatherService.hbm.xml"/>
+        <mapping resource="hbm/Observation.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

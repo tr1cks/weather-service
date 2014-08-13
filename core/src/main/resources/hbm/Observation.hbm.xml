@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.github.trickster88.domain">
+    <class name="Observation">
+        <id name="id">
+            <generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
+                <param name="prefer_sequence_per_entity">true</param>
+            </generator>
+        </id>
+
+        <!-- TODO: not working with bean validation annotations -->
+        <!--<properties name="businessKey" unique="true">-->
+            <property name="dateTime" type="timestamp"/>
+            <many-to-one name="weatherService" column="weatherService_id" cascade="none"/>
+            <many-to-one name="city" column="city_id" cascade="none"/>
+        <!--</properties>-->
+
+        <property name="temperature"/>
+        <property name="humidity"/>
+        <property name="pressure"/>
+
+        <property name="windSpeed"/>
+        <property name="windDirection"/>
+        <property name="windDirectionInDegrees"/>
+
+        <property name="sunrise"/>
+        <property name="sunset"/>
+    </class>
+
+    <database-object>
+        <create>
+            create unique index "observation_datetime_city_service_udx" on observation (datetime, city_id, weatherservice_id);
+        </create>
+        <drop>
+            drop index "observation_datetime_city_service_udx";
+        </drop>
+        <dialect-scope name="org.hibernate.dialect.PostgreSQL9Dialect"/>
+    </database-object>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.github.trickster88.domain">
+    <class name="City">
+        <id name="id">
+            <generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
+                <param name="prefer_sequence_per_entity">true</param>
+            </generator>
+        </id>
+
+        <!-- TODO: not working with bean validation annotations -->
+        <!--<properties name="businessKey" unique="true">-->
+            <property name="name"/>
+            <many-to-one name="country" column="country_id" cascade="none" not-null="true"/>
+        <!--</properties>-->
+
+        <property name="active"/>
+    </class>
+
+    <database-object>
+        <create>
+            create unique index "city_name_country_udx" on city (name, country_id);
+        </create>
+        <drop>
+            drop index "city_name_country_udx";
+        </drop>
+        <dialect-scope name="org.hibernate.dialect.PostgreSQL9Dialect"/>
+    </database-object>
+</hibernate-mapping>
