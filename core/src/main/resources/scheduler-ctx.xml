@@ -6,5 +6,5 @@
 
     <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"/>
 
-    <context:component-scan base-package="com.github.trickster88.jobs"/>
+    <context:component-scan base-package="com.github.tr1cks.weather.core.jobs"/>
 </beans>

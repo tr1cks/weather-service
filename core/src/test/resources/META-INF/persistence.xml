@@ -8,7 +8,7 @@
         <!-- Test environment specific settings -->
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.0.47:5432/weatherservice-test"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/weatherservice-test"/>
             <property name="javax.persistence.jdbc.user" value="weatherservice-test"/>
             <property name="javax.persistence.jdbc.password" value="weatherservice-test"/>
 
@@ -17,7 +17,7 @@
             <property name="hibernate.hibernate.show_sql" value="true"/>
             <property name="hibernate.ejb.cfgfile" value="hibernate.cfg.xml"/>
             <property name="hibernate.connection.provider_class"
-                      value="com.github.trickster88.util.PatchedBoneCPConnectionProvider"/>
+                      value="com.github.tr1cks.weather.core.util.PatchedBoneCPConnectionProvider"/>
 
             <property name="bonecp.idleConnectionTestPeriodInSeconds" value="60"/>
             <property name="bonecp.idleMaxAgeInSeconds" value="240"/>

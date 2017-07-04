@@ -3,8 +3,8 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="com.github.trickster88.domain">
-    <class name="Observation">
+<hibernate-mapping package="com.github.tr1cks.weather.core.domain">
+    <class name="com.github.tr1cks.weather.core.domain.Observation">
         <id name="id">
             <generator class="org.hibernate.id.enhanced.SequenceStyleGenerator">
                 <param name="prefer_sequence_per_entity">true</param>

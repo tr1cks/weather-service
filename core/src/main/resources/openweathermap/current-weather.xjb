@@ -4,7 +4,7 @@
           xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
           extensionBindingPrefixes="xjc" version="2.1">
     <globalBindings generateValueClass="true">
-        <xjc:javaType adapter="com.github.trickster88.clients.util.DateTimeAdapter"
+        <xjc:javaType adapter="com.github.tr1cks.weather.core.clients.util.DateTimeAdapter"
                       name="java.util.Date" xmlType="xs:dateTime"/>
     </globalBindings>
 </bindings>

@@ -4,13 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.github.trickster88.weatherservice</groupId>
-        <artifactId>weatherservice</artifactId>
+        <groupId>com.github.tr1cks.weather</groupId>
+        <artifactId>parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>web</artifactId>
     <packaging>war</packaging>
+
+    <description>Optional Web UI for showing last collected weather observations</description>
 
     <build>
         <finalName>weather-sevice-${project.version}</finalName>
@@ -38,7 +40,7 @@
     <dependencies>
         <!-- Modules -->
         <dependency>
-            <groupId>com.github.trickster88.weatherservice</groupId>
+            <groupId>com.github.tr1cks.weather</groupId>
             <artifactId>core</artifactId>
             <version>${project.version}</version>
         </dependency>

@@ -4,12 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.github.trickster88.weatherservice</groupId>
-        <artifactId>weatherservice</artifactId>
+        <groupId>com.github.tr1cks.weather</groupId>
+        <artifactId>parent</artifactId>
         <version>1.0</version>
     </parent>
 
     <artifactId>core</artifactId>
+
+    <description>Core logic for collecting weather observations from different sources. Can be run without any UI</description>
 
     <build>
         <plugins>
@@ -21,7 +23,7 @@
                     <schemaDirectory>src/main/resources/openweathermap/</schemaDirectory>
                     <bindingDirectory>src/main/resources/openweathermap/</bindingDirectory>
                     <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
-                    <generatePackage>com.github.trickster88.clients.openweathermap.dto</generatePackage>
+                    <generatePackage>com.github.tr1cks.weather.core.clients.openweathermap.dto</generatePackage>
                     <extension>true</extension>
                     <episode>false</episode>
                     <forceRegenerate>true</forceRegenerate>
@@ -31,7 +33,7 @@
                     </args>
                     <plugins>
                         <plugin>
-                            <groupId>com.github.trickster88.xjc-plugins</groupId>
+                            <groupId>com.github.tr1cks.xjc-plugins</groupId>
                             <artifactId>xjc-plugins</artifactId>
                             <version>0.1</version>
                         </plugin>
@@ -39,7 +41,7 @@
                 </configuration>
                 <dependencies>
                     <dependency>
-                        <groupId>com.github.trickster88.xjc-plugins</groupId>
+                        <groupId>com.github.tr1cks.xjc-plugins</groupId>
                         <artifactId>xjc-plugins</artifactId>
                         <version>0.1</version>
                     </dependency>
@@ -52,7 +54,7 @@
                 <version>0.4.5</version>
                 <configuration>
                     <sourceDirectory>src/main/resources/hamweather/current-weather.json</sourceDirectory>
-                    <targetPackage>com.github.trickster88.clients.hamweather.dto</targetPackage>
+                    <targetPackage>com.github.tr1cks.weather.core.clients.hamweather.dto</targetPackage>
                     <includeToString>false</includeToString>
                     <includeHashcodeAndEquals>false</includeHashcodeAndEquals>
                     <outputDirectory>${project.build.sourceDirectory}</outputDirectory>
