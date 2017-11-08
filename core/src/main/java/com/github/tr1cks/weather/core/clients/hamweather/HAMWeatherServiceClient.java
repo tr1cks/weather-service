@@ -33,8 +33,8 @@ public class HAMWeatherServiceClient extends AbstractWeatherServiceClient implem
     public static final Long DEFAULT_DELAY_IN_MILLISECONDS = 30 * 1000L;
 
     //TODO: move to configs
-    private static final String CLIENT_ID = "6JOMd0T6fMeyEcaKntnUq";
-    private static final String CLIENT_SECRET = "EUeLIM3eGENx1QtKGf5u0uIknCcbNAp5HhWyYr2S";
+    private static final String CLIENT_ID = "8nTvHGDF9FtFJGRvD68AY";
+    private static final String CLIENT_SECRET = "2ubiwiPtMyn5Qw7jmIlRJPCdtFrSbbAZsaprHRH1";
 
     @Autowired public HAMWeatherServiceClient(WeatherServiceDAO weatherServiceDAO) {
         super(SERVICE_NAME, DEFAULT_DELAY_IN_MILLISECONDS, weatherServiceDAO, false);

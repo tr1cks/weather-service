@@ -36,3 +36,5 @@ In project was used:
 2. Create user with credentials "weatherservice-test"/"weatherservice-test" in it.
 3. Create database "weatherservice-test" with owner "weatherservice-test".
 4. Run JUnit tests.
+
+![Weather page](screenshorts/weather.png)

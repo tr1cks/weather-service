@@ -36,7 +36,7 @@ public class OpenWeatherMapServiceClient extends AbstractWeatherServiceClient im
     public static final Long DEFAULT_DELAY_IN_MILLISECONDS = 30 * 1000L;
 
     //TODO: move to configs
-    private static final String API_KEY = "f193df776fd8bdb81b989e6dd422767b";
+    private static final String API_KEY = "961d60ba857b45ab51aa4777b332f1da";
 
     @Autowired public OpenWeatherMapServiceClient(WeatherServiceDAO weatherServiceDAO) {
         super(SERVICE_NAME, DEFAULT_DELAY_IN_MILLISECONDS, weatherServiceDAO, true);
