@@ -1,6 +1,6 @@
 # Weather service
 
-This is simple weather aggregation service, that i wrote a long time ago.
+This is simple weather aggregation service. It was test task, that I wrote long time ago.
 It's main goal is collecting weather observations from different sources.
 Additional module "web" can show last gathered info in web UI, but it not necessary - core can work without it.
 
@@ -10,8 +10,8 @@ In project was used:
 * Java Bean validation.
 * Quartz.
 * PostgreSQL (migrations wrote in plain SQL).
-* Flyway for migrations as experimental lightweight alternative to Liquibase.
-* Spring MVC and Bootstrap for UI.
+* Flyway used for migrations as experimental lightweight alternative to Liquibase.
+* UI build with Spring MVC and Bootstrap.
 
 ## Features
 * Aggregating weather observations from different sources (HAM Weather and OpenWeatherMap at current time).
